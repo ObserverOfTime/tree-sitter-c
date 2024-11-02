@@ -53,8 +53,6 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/tree-sitter-c.pc"
 install(TARGETS tree-sitter-c
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-add_custom_target(test "${TREE_SITTER_CLI}" test
+add_custom_target(ts-test "${TREE_SITTER_CLI}" test
                   WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
                   COMMENT "tree-sitter test")
-
-# vim:ft=cmake:
